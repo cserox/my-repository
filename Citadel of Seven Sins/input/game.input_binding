@@ -1,0 +1,44 @@
+key_trigger {
+  input: KEY_UP
+  action: "jump"
+}
+key_trigger {
+  input: KEY_DOWN
+  action: "slide"
+}
+key_trigger {
+  input: KEY_SPACE
+  action: "pause"
+}
+key_trigger {
+  input: KEY_ESC
+  action: "back_clicked"
+}
+key_trigger {
+  input: KEY_RIGHT
+  action: "roll_over"
+}
+key_trigger {
+  input: KEY_BACK
+  action: "back_clicked"
+}
+key_trigger {
+  input: KEY_F
+  action: "debug_on"
+}
+key_trigger {
+  input: KEY_A
+  action: "debug_off"
+}
+key_trigger {
+  input: KEY_R
+  action: "restart_game"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_LEFT
+  action: "click"
+}
+touch_trigger {
+  input: TOUCH_MULTI
+  action: "touch"
+}

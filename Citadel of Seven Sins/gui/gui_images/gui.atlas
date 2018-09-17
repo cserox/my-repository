@@ -1,0 +1,79 @@
+images {
+  image: "/gui/gui_images/close.png"
+}
+images {
+  image: "/gui/gui_images/swipe_down.png"
+}
+images {
+  image: "/gui/gui_images/swipe_up.png"
+}
+images {
+  image: "/gui/gui_images/swipe_right.png"
+}
+images {
+  image: "/gui/gui_images/music_off.png"
+}
+images {
+  image: "/gui/gui_images/music_on.png"
+}
+images {
+  image: "/gui/gui_images/for_logo_1280\321\205720.png"
+}
+images {
+  image: "/gui/gui_images/logo_1280\321\205720.png"
+}
+images {
+  image: "/gui/gui_images/gear.png"
+}
+images {
+  image: "/gui/gui_images/button.png"
+}
+images {
+  image: "/gui/gui_images/pause.png"
+}
+images {
+  image: "/gui/gui_images/background_menu.png"
+}
+images {
+  image: "/gui/gui_images/for_menu.png"
+}
+images {
+  image: "/gui/gui_images/touch.png"
+}
+images {
+  image: "/gui/gui_images/touch_pressed.png"
+}
+images {
+  image: "/gui/gui_images/old/flatDark25.png"
+}
+images {
+  image: "/gui/gui_images/forTutorial.png"
+}
+images {
+  image: "/gui/gui_images/forTutorial2.png"
+}
+images {
+  image: "/gui/gui_images/forTutorial3.png"
+}
+animations {
+  id: "touch"
+  images {
+    image: "/gui/gui_images/touch.png"
+  }
+  images {
+    image: "/gui/gui_images/touch_pressed.png"
+  }
+  images {
+    image: "/gui/gui_images/touch_pressed.png"
+  }
+  images {
+    image: "/gui/gui_images/touch_pressed.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 5
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

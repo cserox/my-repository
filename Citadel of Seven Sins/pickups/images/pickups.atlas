@@ -1,0 +1,98 @@
+animations {
+  id: "coin1"
+  images {
+    image: "/pickups/images/moentka-1_1.png"
+  }
+  images {
+    image: "/pickups/images/moentka-1_2.png"
+  }
+  images {
+    image: "/pickups/images/moentka-1_3.png"
+  }
+  images {
+    image: "/pickups/images/moentka-1_4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 10
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "coin2"
+  images {
+    image: "/pickups/images/moentka-2-1.png"
+  }
+  images {
+    image: "/pickups/images/moentka-2-2.png"
+  }
+  images {
+    image: "/pickups/images/moentka-2-3.png"
+  }
+  images {
+    image: "/pickups/images/moentka-2-4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 10
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "coin3"
+  images {
+    image: "/pickups/images/moentka-3_1.png"
+  }
+  images {
+    image: "/pickups/images/moentka-3_2.png"
+  }
+  images {
+    image: "/pickups/images/moentka-3_3.png"
+  }
+  images {
+    image: "/pickups/images/moentka-3_4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 10
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "pickup"
+  images {
+    image: "/pickups/images/ischeznovenie1.png"
+  }
+  images {
+    image: "/pickups/images/ischeznovenie2.png"
+  }
+  images {
+    image: "/pickups/images/ischeznovenie3.png"
+  }
+  images {
+    image: "/pickups/images/ischeznovenie4.png"
+  }
+  images {
+    image: "/pickups/images/ischeznovenie5.png"
+  }
+  images {
+    image: "/pickups/images/ischeznovenie6.png"
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 20
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "kek"
+  images {
+    image: "/pickups/images/\320\273\321\203\320\2731.png"
+  }
+  images {
+    image: "/pickups/images/\320\273\321\203\320\2732.jpg"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 1
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
