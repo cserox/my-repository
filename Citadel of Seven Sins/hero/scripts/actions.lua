@@ -6,6 +6,14 @@ require "hero/variables"
 require "hero/scripts/states"
 require "variables"
 
+function pole_jump(self)
+	if pole_in_range then
+		set_state(self, "jumping")
+		self.velocity = pole_jump_vector
+		pole_in_range = false
+	end
+end
+
 function break_slide(self)--на всякий пожарный,	 можно перенести в апдейт
 	current_slide_moment = 0
 	sliding = false

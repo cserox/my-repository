@@ -1,7 +1,10 @@
 require "variables"
+local jumping = false
+local launch = true
 function init(self)
 	self.position = go.get_position()
 	self.velocity = vmath.vector3(0,0,0)
+	
 end
 
 function final(self)
@@ -9,9 +12,28 @@ function final(self)
 	-- Remove this function if not needed
 end
 
+
+local function launch_projectile(self)
+	msg.post(current_level..":/controller#script", "ping")
+	factory.create("#generic_projectile", self.position, nil, {}, 4)
+	launch = false
+end
+
+--wip
 local function jump(self)
+	--print(self.position)
 	self.velocity.y = 1500
-	--print('jump???')
+	--[[if (self.position.y > 50 and self.velocity.y <= 0) then
+		jumping = true
+		self.velocity.y = -200
+	elseif(self.position.x > 300) then
+		self.velocity.y = 0
+		self.velocity.x = -150
+	else
+		self.velocity.x = 0
+		self.velocity.y = 2500
+		jumping = false 
+	end]]
 end
 
 local function handle_geometry_contact(self, normal, distance)
@@ -29,12 +51,16 @@ local function handle_geometry_contact(self, normal, distance)
 end
 
 function update(self, dt)
-	if(self.velocity.y == 0) then
-		jump(self)
+	if launch then
+		launch_projectile(self)
 	end
+	
 	if not self.ground_contact then
 		self.velocity.y = self.velocity.y + gravity
+	else 
+		jump(self)
 	end
+	self.position = go.get_position()
 	go.set_position(go.get_position() + self.velocity * dt)
 	self.correction = vmath.vector3()
 	self.ground_contact = false
@@ -43,9 +69,11 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("contact_point_response") then
 		local pos = go.get_position()
-		if message.group == hash("geometry") then
+		if message.group == hash("geometry") and not jumping then
 			handle_geometry_contact(self, message.normal, message.distance)
 		end
+	elseif message_id == hash("half_way") then
+		launch = true
 	end
 	-- Add message-handling code here
 	-- Remove this function if not needed

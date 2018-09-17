@@ -11,27 +11,11 @@ deathscreen_state = false
 next_try_is_training = false
 
 --Числовые переменные
-slide_cooldown = 10
-slide_time = 30
-impact_speed = vmath.vector3(1000, 500,0)
-gravity = -56
-slide_cooldown_max = 10
-jump_takeoff_speed = 1100
-invincibility_max = 50
-min_impact_speed = 1000
-max_impact_speed = 1250
-catch_up_speed = 25
-jump_break_speed = -2000
 max_speed = 2000
 acceleration = 7
 score = 0
 min_reborn_cost = 100
 reborn_cost = 0
-dashing_speed = 1500
-dashing_distance = 150
-default_hero_posititon_x = 300
-going_back_speed = -70
-current_position = 0
 
 --Магазин
 coins = 0

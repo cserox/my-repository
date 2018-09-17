@@ -77,6 +77,8 @@ function update(self, dt)
 
 end
 
+local boss
+
 function on_message(self, message_id, message, sender)
 	if message_id == hash("spawnhero") then
 		local p = factory.create("#herofactory",vmath.vector3(300, 142, 0), nil,{},1)
@@ -96,11 +98,14 @@ function on_message(self, message_id, message, sender)
 		reset = true
 		reset_timer = 0
 		self.speed = default_speed
-		--collectionfactory.create("#story1", vmath.vector3(1600, 48, 0), nil, {}, 1)
+		collectionfactory.create("#story1", vmath.vector3(1600, 48, 0), nil, {}, 1)
 		msg.post("#", "spawnhero")
 		msg.post("background3/controller#background3", "reset")
 		msg.post("bacground3_loop/controller#background3_loop", "reset")
-		
+	elseif message_id == hash("ping") then
+		boss = sender
+	elseif message_id == hash("half_way") then
+		msg.post(boss, "half_way")
 	elseif message_id == hash("reset_speed") then
 		self.speed = self.speed * 0.77
 		if self.speed < default_speed then

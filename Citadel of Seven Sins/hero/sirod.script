@@ -79,6 +79,7 @@ function update(self, dt)
 		
 		self.correction = vmath.vector3()
 		roll_allowed = false
+		pole_in_range = false
 		self.ground_contact = false
 		self.platform_contact_from_below_last_frame = self.platform_contact_from_below
 		self.platform_contact_from_below = false
@@ -126,6 +127,8 @@ function on_message(self, message_id, message, sender)
 			on_impact(self, "hard")
 		elseif message.group == hash("impact_soft") then
 			on_impact(self, "soft")
+		elseif message.group == hash("pole") then
+			pole_in_range = true
 		elseif message.group == hash("geometry") then
 			handle_geometry_contact(self, message.normal, message.distance)
 		elseif (message.group == hash("obstacle") and not (pushed or invincible)) then
@@ -173,7 +176,9 @@ function touch_on_input(self, action_id, action)
 		if action.x > 750 then
 			if roll_allowed then
 				roll(self)
-			else 
+			elseif pole_in_range then
+				pole_jump(self)
+			else
 				dash(self)
 			end
 		elseif action.y < 300 then
@@ -239,7 +244,9 @@ function on_input(self, action_id, action)
 		if action_id == hash("roll_over") then
 			if roll_allowed then
 				roll(self)
-			else 
+			elseif pole_in_range then
+				pole_jump(self)
+			else
 				dash(self)
 			end
 		end
