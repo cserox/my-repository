@@ -41,7 +41,7 @@ embedded_components {
   "    count: 3\n"
   "  }\n"
   "  data: 75.0\n"
-  "  data: 71.0\n"
+  "  data: 125.0\n"
   "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"
@@ -70,6 +70,24 @@ embedded_components {
   ""
   position {
     x: 0.0
+    y: -4.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "straight_spit"
+  type: "factory"
+  data: "prototype: \"/bosses/boss_1/projectiles/straight_spit.go\"\n"
+  "load_dynamically: false\n"
+  ""
+  position {
+    x: 0.0
     y: 0.0
     z: 0.0
   }
@@ -81,9 +99,45 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "generic_projectile"
+  id: "spit_low"
   type: "factory"
-  data: "prototype: \"/bosses/projectiles/generic_projectile.go\"\n"
+  data: "prototype: \"/bosses/boss_1/projectiles/spit_low.go\"\n"
+  "load_dynamically: false\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "spit_target"
+  type: "factory"
+  data: "prototype: \"/bosses/boss_1/projectiles/spit_target.go\"\n"
+  "load_dynamically: false\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "spit_near"
+  type: "factory"
+  data: "prototype: \"/bosses/boss_1/projectiles/spit_near.go\"\n"
   "load_dynamically: false\n"
   ""
   position {
