@@ -1,31 +1,29 @@
 require "level.utils"
 require "variables"
+require "global"
 local flag = true
 
 function init(self)
-	self.speed = 1800
+	self.speed = 2200
 end
 
 function update(self, dt)
 	local pos = go.get_position()
-	if pos.x < -1000 or reset then
-		flag = true
+	if pos.x < -200 or pos.y < 0 or reset then
+		proj_on_screen = false
 		go.delete(true)
 	end
-	if pos.x < 0 and flag then
-		print("rrr1b")
-		msg.post(current_level..":/controller#script", "half_way")
-		flag = false
-	end
 	pos.x = pos.x - self.speed * dt
-	pos.y = pos.x*pos.x + pos.y
-	--pos.y = 30*math.cos(pos.x * 0.01) + pos.y
+	pos.y = -7*math.cos(pos.x * 0.003) + pos.y
 	go.set_position(pos)
 	msg.post(current_level..":/controller#script", "speed_request")
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("set_speed") then
-		self.speed = message.speed + 900
+		self.speed = message.speed + 1300
+	elseif message.group == hash("geometry") then
+		flag = true
+		go.delete(true)
 	end
 end

@@ -1,6 +1,6 @@
 components {
-  id: "generic_projectile"
-  component: "/bosses/projectiles/generic_projectile.script"
+  id: "straight_spit"
+  component: "/bosses/boss_1/projectiles/straight_spit.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,7 +16,7 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/bosses/projectiles/projectiles.atlas\"\n"
+  data: "tile_set: \"/bosses/boss_1/projectiles/projectiles.atlas\"\n"
   "default_animation: \"ischeznovenie1\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
@@ -41,8 +41,9 @@ embedded_components {
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"0\"\n"
+  "group: \"pole\"\n"
   "mask: \"hero\"\n"
+  "mask: \"geometry\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"

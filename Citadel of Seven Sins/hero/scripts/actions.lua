@@ -9,7 +9,8 @@ require "variables"
 function pole_jump(self)
 	if pole_in_range then
 		set_state(self, "jumping")
-		self.velocity = pole_jump_vector
+		self.velocity.y = pole_jump_speed
+		--self.velocity = pole_jump_vector
 		pole_in_range = false
 	end
 end
