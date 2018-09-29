@@ -49,7 +49,7 @@ end
 function calculate_score(self)
 	if not pause_state then
 		score = score + self.speed / 10000
-		current_progress = current_progress + self.speed * current_dt
+		current_progress = current_progress + 1
 		msg.post("/score#score", "progress", {value = math.ceil(current_progress*100/level_progress[current_level])})
 		msg.post("/score#score", "score", {value = math.ceil(score)})
 		msg.post("/score#score", "coins", {value = coins})
@@ -91,6 +91,7 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("continue") then
 		msg.post(current_hero, "continue")
 	elseif message_id == hash("reset") then 
+		current_progress = 0
 		save_gamedata()
 		training_state = next_try_is_training
 		next_try_is_training = false

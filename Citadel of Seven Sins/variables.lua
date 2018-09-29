@@ -25,7 +25,7 @@ current_level_coins = 0
 current_progress = 0
 level_progress = {
 	["level"] = 100, 
-	["1_story_collection"] = 10000}
+	["1_story_collection"] = 1000}
 
 --Переменные для включения логов
 gui_log = false
