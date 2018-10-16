@@ -32,7 +32,7 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "story1"
+  id: "level_1"
   type: "collectionfactory"
   data: "prototype: \"/level/story_levels/level_1/level_1_obstacles.collection\"\n"
   "load_dynamically: false\n"
@@ -50,7 +50,7 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "boss"
+  id: "level_1_boss"
   type: "factory"
   data: "prototype: \"/bosses/boss_1/gluttony.go\"\n"
   "load_dynamically: false\n"

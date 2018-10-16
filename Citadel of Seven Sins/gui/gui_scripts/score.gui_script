@@ -22,7 +22,6 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("progress") then
 		if current_progress <= max_level_progress[current_level] then
 			gui.animate(gui.get_node("bar"), "size", vmath.vector3(current_progress*100/max_level_progress[current_level], 30, 0), gui.EASING_INCUBIC, 0)
-			gui.set_text(gui.get_node("current"), message.value.."/100")
 		end
 	elseif message_id == hash("coins") then
 		gui.set_text(gui.get_node("coins_num"), message.value)

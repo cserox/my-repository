@@ -1,6 +1,6 @@
 components {
   id: "tentacle"
-  component: "/bosses/projectiles/tentacle.script"
+  component: "/bosses/boss_1/projectiles/tentacle.script"
   position {
     x: 0.0
     y: 0.0

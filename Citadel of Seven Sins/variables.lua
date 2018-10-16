@@ -23,16 +23,15 @@ current_level_coins = 0
 
 --Прогресс
 current_progress = 0
-<<<<<<< HEAD
 max_level_progress = {
+	["level_1"] = 200
+}
+
+--Прогресс босса
+current_boss_progress = 0
+max_boss_progress = {
 	["level_1"] = 10000
 }
-=======
-level_progress = {
-	["level"] = 100, 
-	["1_story_collection"] = 1000}
->>>>>>> c7a55b7a384c1e7c11a2682cdb50e694e36bdc32
-
 --Переменные для включения логов
 gui_log = false
 --Индекс нынешнего уровня
