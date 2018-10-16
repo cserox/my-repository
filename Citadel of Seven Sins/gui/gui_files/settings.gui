@@ -1,4 +1,4 @@
-script: "/gui/gui_scripts/settings.gui_script"
+script: "/gui/gui_images/settings.gui_script"
 fonts {
   name: "pixels"
   font: "/fonts/pixels.font"

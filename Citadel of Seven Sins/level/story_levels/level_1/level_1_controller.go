@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/level/story_levels/level_1/level_1_controller.script"
+  component: "/level/level_1_controller.script"
   position {
     x: 0.0
     y: 0.0

@@ -23,17 +23,17 @@ current_level_coins = 0
 
 --Прогресс
 current_progress = 0
-level_progress = {
-	["level"] = 100, 
-	["1_story_collection"] = 10000}
+max_level_progress = {
+	["level_1"] = 10000
+}
 
 --Переменные для включения логов
 gui_log = false
 --Индекс нынешнего уровня
 index_of_current_level = 1 --Счет идет с 1
 --Список уровней
-list_of_levels = {"level", "1_story_collection"}
-current_level = nil
+list_of_levels = {"level_1"}
+current_level = "level_1"
 
 language = {"EN", "РУ"}
 language_state = 1
